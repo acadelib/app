@@ -11,10 +11,7 @@
 </template>
 
 <script>
-import axios from "axios";
-
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:8000";
+import ApiService from "@/common/api.service";
 
 export default {
   name: "Login",
@@ -28,17 +25,15 @@ export default {
 
   methods: {
     login() {
-      axios.get("/sanctum/csrf-cookie").then(() => {
-        axios
-          .post("/login", {
-            email: this.email,
-            password: this.password
-          })
-          .then(() => {
-            axios.get("/api/user").then(response => {
-              console.log(response);
-            });
+      ApiService.get("/sanctum/csrf-cookie").then(() => {
+        ApiService.post("/login", {
+          email: this.email,
+          password: this.password
+        }).then(() => {
+          ApiService.get("/api/user").then(response => {
+            console.log(response);
           });
+        });
       });
     }
   }
