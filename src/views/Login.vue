@@ -2,7 +2,7 @@
   <div class="login">
     <h1>Login</h1>
 
-    <form @submit.prevent="login">
+    <form @submit.prevent="login(email, password)">
       <input type="email" placeholder="Adresse e-mail" v-model="email" />
       <input type="password" placeholder="Mot de passe" v-model="password" />
       <button type="submit">Connexion</button>
@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import ApiService from "@/common/api.service";
-
 export default {
   name: "Login",
 
@@ -24,16 +22,9 @@ export default {
   },
 
   methods: {
-    login() {
-      ApiService.get("/sanctum/csrf-cookie").then(() => {
-        ApiService.post("/login", {
-          email: this.email,
-          password: this.password
-        }).then(() => {
-          ApiService.get("/api/user").then(response => {
-            console.log(response);
-          });
-        });
+    login(email, password) {
+      this.$store.dispatch("user/login", { email, password }).then(user => {
+        console.log(user);
       });
     }
   }
