@@ -3,10 +3,14 @@ import mutations from "./mutations";
 
 const user = {
   state: {
-    user: {}
+    user: {},
+    isAuthenticated: false
   },
   actions,
-  mutations
+  mutations,
+  getters: {
+    isAuthenticated: state => state.isAuthenticated
+  }
 };
 
 export default user;
