@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { LOGIN } from "@/store/actions.type";
+
 export default {
   name: "Login",
 
@@ -23,7 +25,7 @@ export default {
 
   methods: {
     login(email, password) {
-      this.$store.dispatch("user/login", { email, password }).then(user => {
+      this.$store.dispatch(LOGIN, { email, password }).then(user => {
         console.log(user);
       });
     }
