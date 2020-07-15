@@ -25,8 +25,8 @@ export default {
 
   methods: {
     login(email, password) {
-      this.$store.dispatch(LOGIN, { email, password }).then(user => {
-        console.log(user);
+      this.$store.dispatch(LOGIN, { email, password }).then(() => {
+        this.$router.push({ name: "dashboard" });
       });
     }
   }

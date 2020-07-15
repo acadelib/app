@@ -9,7 +9,7 @@ const actions = {
         ApiService.post("/login", credentials).then(() => {
           ApiService.get("/api/user").then(response => {
             context.commit(SET_AUTH, response.data);
-            resolve(response.data);
+            resolve();
           });
         });
       });

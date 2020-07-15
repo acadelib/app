@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="l-auth">
     <router-view />
   </div>
 </template>
