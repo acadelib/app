@@ -2,6 +2,9 @@
   <div class="login">
     <h1>Authentification</h1>
 
+    <p class="l-auth__text">Bienvenue sur Acadelib !</p>
+    <p class="l-auth__text">Veuillez vous authentifier pour continuer.</p>
+
     <form @submit.prevent="login(email, password)">
       <input type="email" placeholder="Adresse e-mail" v-model="email" />
       <input type="password" placeholder="Mot de passe" v-model="password" />
