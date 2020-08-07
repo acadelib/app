@@ -1,0 +1,32 @@
+stages:
+  - build
+  - test
+
+install_dependencies:
+  stage: build
+  image: node:latest
+  script:
+    - yarn install
+  artifacts:
+    paths:
+      - node_modules/
+
+jest:
+  stage: test
+  image: node:latest
+  dependencies:
+    - install_dependencies
+  script:
+    - yarn test:unit
+
+cypress:
+  stage: test
+  image: cypress/base:10
+  dependencies:
+    - install_dependencies
+  script:
+    - yarn test:e2e --headless
+  artifacts:
+    paths:
+      - tests/e2e/screenshots
+      - tests/e2e/videos
