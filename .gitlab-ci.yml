@@ -4,7 +4,7 @@ stages:
 
 install_dependencies:
   stage: build
-  image: node:latest
+  image: node:10
   script:
     - yarn install
   artifacts:
@@ -13,7 +13,7 @@ install_dependencies:
 
 jest:
   stage: test
-  image: node:latest
+  image: node:10
   dependencies:
     - install_dependencies
   script:
