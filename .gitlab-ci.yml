@@ -2,6 +2,9 @@ stages:
   - build
   - test
 
+variables:
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
 install_dependencies:
   stage: build
   image: node:10
@@ -9,6 +12,7 @@ install_dependencies:
     - yarn install
   artifacts:
     paths:
+      - cache/Cypress
       - node_modules/
 
 jest:
