@@ -3,7 +3,10 @@ stages:
   - test
 
 variables:
-  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/cypress"
+
+cache:
+  key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
 
 install_dependencies:
   stage: build
@@ -12,7 +15,11 @@ install_dependencies:
     - yarn install
   artifacts:
     paths:
-      - cache/Cypress
+      - cache/cypress
+      - node_modules/
+  cache:
+    paths:
+      - cache/cypress
       - node_modules/
 
 jest:
@@ -31,6 +38,8 @@ cypress:
   script:
     - yarn test:e2e --headless
   artifacts:
+    when: always
     paths:
       - tests/e2e/screenshots
       - tests/e2e/videos
+    expire_in: 1 day
