@@ -1,6 +1,11 @@
 // Colors
 $picton-blue: #28a6e5;
 $mine-shaft: #333;
+$white: #fff;
+
+$theme-colors: (
+  "primary": $picton-blue
+);
 
 // Typography
 $font-family: "IBM Plex Sans", sans-serif;

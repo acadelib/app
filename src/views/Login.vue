@@ -8,16 +8,22 @@
     <form @submit.prevent="login(email, password)">
       <input type="email" placeholder="Adresse e-mail" v-model="email" />
       <input type="password" placeholder="Mot de passe" v-model="password" />
-      <button type="submit">Connexion</button>
+
+      <v-button type="submit" color="primary" block>Connexion</v-button>
     </form>
   </div>
 </template>
 
 <script>
 import { LOGIN } from "@/store/actions.type";
+import VButton from "@/components/Button";
 
 export default {
   name: "Login",
+
+  components: {
+    VButton
+  },
 
   data() {
     return {
