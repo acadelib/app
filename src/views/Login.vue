@@ -6,8 +6,21 @@
     <p class="l-auth__text">Veuillez vous authentifier pour continuer.</p>
 
     <form @submit.prevent="login(email, password)">
-      <input type="email" placeholder="Adresse e-mail" v-model="email" />
-      <input type="password" placeholder="Mot de passe" v-model="password" />
+      <v-input
+        id="email"
+        type="email"
+        label="Adresse e-mail"
+        placeholder="Saisissez votre adresse e-mail"
+        v-model="email"
+      ></v-input>
+
+      <v-input
+        id="password"
+        type="password"
+        label="Mot de passe"
+        placeholder="Saisissez votre mot de passe"
+        v-model="password"
+      ></v-input>
 
       <v-button type="submit" color="primary" block>Connexion</v-button>
     </form>
@@ -17,12 +30,14 @@
 <script>
 import { LOGIN } from "@/store/actions.type";
 import VButton from "@/components/Button";
+import VInput from "@/components/FormInput";
 
 export default {
   name: "Login",
 
   components: {
-    VButton
+    VButton,
+    VInput
   },
 
   data() {

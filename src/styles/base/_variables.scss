@@ -1,15 +1,24 @@
 // Colors
 $picton-blue: #28a6e5;
 $mine-shaft: #333;
+$mercury: #e6e6e6;
 $white: #fff;
+
+$primary: $picton-blue;
 
 $theme-colors: (
   "primary": $picton-blue
 );
 
+// Components
+$border-width: 1px;
+$border-color: $mercury;
+$border-radius: .125rem;
+
 // Typography
 $font-family: "Open Sans", sans-serif;
 $font-size-base: .8125rem;
+$font-size-sm: .75rem;
 $font-weight-base: 300;
 
 $headings-font-family: "Poppins", sans-serif;
