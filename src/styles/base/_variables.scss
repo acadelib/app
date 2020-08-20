@@ -8,8 +8,12 @@ $theme-colors: (
 );
 
 // Typography
-$font-family: "IBM Plex Sans", sans-serif;
+$font-family: "Open Sans", sans-serif;
+$font-size-base: .8125rem;
 $font-weight-base: 300;
+
+$headings-font-family: "Poppins", sans-serif;
+$headings-font-weight: 500;
 
 // Body
 $body-color: $mine-shaft;

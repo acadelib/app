@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1>Authentification</h1>
+    <h1 class="o-h2">Authentification</h1>
 
     <p class="l-auth__text">Bienvenue sur Acadelib !</p>
     <p class="l-auth__text">Veuillez vous authentifier pour continuer.</p>

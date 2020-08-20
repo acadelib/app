@@ -1,0 +1,35 @@
+%heading {
+  margin-bottom: .5rem;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+.o-h1 {
+  @extend %heading;
+  font-size: $font-size-base * 2.5;
+}
+
+.o-h2 {
+  @extend %heading;
+  font-size: $font-size-base * 2;
+}
+
+.o-h3 {
+  @extend %heading;
+  font-size: $font-size-base * 1.75;
+}
+
+.o-h4 {
+  @extend %heading;
+  font-size: $font-size-base * 1.5;
+}
+
+.o-h5 {
+  @extend %heading;
+  font-size: $font-size-base * 1.25;
+}
+
+.o-h6 {
+  @extend %heading;
+  font-size: $font-size-base;
+}
