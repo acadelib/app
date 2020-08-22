@@ -5,12 +5,12 @@
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  padding: .9375rem;
 
   &__logo {
     display: block;
     width: 3.125rem;
     height: 2.5rem;
+    margin: .9375rem;
     font: 0/0 a;
     background: url("~@/assets/logo.svg") no-repeat center center;
     background-size: cover;

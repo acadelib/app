@@ -1,0 +1,13 @@
+.l-container {
+  width: 100%;
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $name, $width in $grid-breakpoints {
+    @media (min-width: $width) {
+      max-width: map-get($container-max-widths, $name);
+    }
+  }
+}

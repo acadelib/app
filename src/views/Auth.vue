@@ -9,7 +9,13 @@
       >
     </header>
 
-    <router-view />
+    <div class="l-container">
+      <div class="l-grid is-centered">
+        <div class="l-grid__column is-xs-12 is-sm-8 is-md-6 is-lg-5 is-xl-4">
+          <router-view />
+        </div>
+      </div>
+    </div>
 
     <footer class="l-auth__footer"></footer>
   </div>
