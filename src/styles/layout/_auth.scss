@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - .3125rem);
 
   &__logo {
     display: block;
@@ -16,8 +16,16 @@
     background-size: cover;
   }
 
+  &__title {
+    text-align: center;
+  }
+
   &__text {
     margin: 0;
     text-align: center;
+
+    &:last-of-type {
+      margin-bottom: .9375rem;
+    }
   }
 }
