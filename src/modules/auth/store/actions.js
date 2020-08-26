@@ -1,6 +1,6 @@
-import ApiService from "@/common/api.service";
-import { LOGIN, LOGOUT } from "@/store/actions.type";
-import { SET_AUTH, PURGE_AUTH } from "@/store/mutations.type";
+import ApiService from "@/core/common/api.service";
+import { LOGIN, LOGOUT } from "./actions.type";
+import { SET_AUTH, PURGE_AUTH } from "./mutations.type";
 
 const actions = {
   [LOGIN](context, credentials) {

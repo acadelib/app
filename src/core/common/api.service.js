@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "@/common/config";
+import { API_URL } from "@/core/common/config";
 
 export default {
   init() {

@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import VField from "@/components/FormField";
-import VLabel from "@/components/FormLabel";
+import VField from "./FormField";
+import VLabel from "./FormLabel";
 
 export default {
   components: {

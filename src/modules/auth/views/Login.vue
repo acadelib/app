@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import { LOGIN } from "@/store/actions.type";
-import VButton from "@/components/Button";
-import VInput from "@/components/FormInput";
+import { LOGIN } from "@/modules/auth/store/actions.type";
+import VButton from "@/core/components/Button";
+import VInput from "@/core/components/FormInput";
 
 export default {
   name: "Login",

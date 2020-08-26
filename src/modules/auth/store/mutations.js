@@ -1,4 +1,4 @@
-import { SET_AUTH, PURGE_AUTH } from "@/store/mutations.type";
+import { SET_AUTH, PURGE_AUTH } from "./mutations.type";
 
 const mutations = {
   [SET_AUTH](state, user) {
