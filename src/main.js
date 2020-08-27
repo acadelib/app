@@ -9,14 +9,8 @@ ApiService.init();
 
 require("@/modules/auth");
 
-const router = RouterService.init();
 const store = StoreService.init();
-
-router.beforeEach((to, from, next) => {
-  if (!store.getters.isAuthenticated && to.name !== "login")
-    next({ name: "login" });
-  else next();
-});
+const router = RouterService.init();
 
 new Vue({
   router,
