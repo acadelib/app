@@ -15,11 +15,11 @@ install_dependencies:
     - yarn install
   artifacts:
     paths:
-      - cache/cypress
+      - cache/cypress/
       - node_modules/
   cache:
     paths:
-      - cache/cypress
+      - cache/cypress/
       - node_modules/
 
 jest:
@@ -28,7 +28,7 @@ jest:
   dependencies:
     - install_dependencies
   script:
-    - yarn test:unit
+    - yarn test:unit --passWithNoTests
 
 cypress:
   stage: test
@@ -40,6 +40,6 @@ cypress:
   artifacts:
     when: always
     paths:
-      - tests/e2e/screenshots
-      - tests/e2e/videos
+      - tests/e2e/screenshots/
+      - tests/e2e/videos/
     expire_in: 1 day

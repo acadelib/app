@@ -8,14 +8,15 @@ const routes = [
   {
     path: "/",
     component: () => import("../views/App"),
-    meta: {
-      middleware: [auth]
-    },
+    redirect: { name: "dashboard" },
     children: [
       {
         path: "dashboard",
         name: "dashboard",
-        component: () => import("../views/Dashboard")
+        component: () => import("../views/Dashboard"),
+        meta: {
+          middleware: [auth]
+        }
       }
     ]
   }

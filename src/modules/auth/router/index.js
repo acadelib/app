@@ -4,14 +4,15 @@ const routes = [
   {
     path: "/auth",
     component: () => import(/* webpackChunkName: "auth" */ "../views/Auth"),
-    meta: {
-      middleware: [guest]
-    },
     children: [
       {
         path: "login",
         name: "login",
-        component: () => import(/* webpackChunkName: "auth" */ "../views/Login")
+        component: () =>
+          import(/* webpackChunkName: "auth" */ "../views/Login"),
+        meta: {
+          middleware: [guest]
+        }
       }
     ]
   }
