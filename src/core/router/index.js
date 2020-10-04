@@ -7,13 +7,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    component: () => import("../views/App"),
+    component: () => import("../views/layouts/App"),
     redirect: { name: "dashboard" },
     children: [
       {
         path: "dashboard",
         name: "dashboard",
-        component: () => import("../views/Dashboard"),
+        component: () => import("../views/pages/Dashboard"),
         meta: {
           middleware: [auth]
         }
