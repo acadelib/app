@@ -14,8 +14,12 @@ class RouterService {
     router.addRoutes(this.routes);
 
     router.beforeEach((to, from, next) => {
-      if (to.meta.middleware) {
-        const middleware = to.meta.middleware;
+      if (to.meta.middleware || to.matched.some(m => m.meta.middleware)) {
+        const middleware = [
+          ...(to.meta.middleware ?? []),
+          ...to.matched.map(m => m.meta.middleware).flat()
+        ];
+
         const context = {
           to,
           from,
