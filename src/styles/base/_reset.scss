@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  border-top: .3125rem solid $primary;
+}
+
+%heading {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+h1 {
+  @extend %heading;
+  font-size: $font-size-base * 2.5;
+}
+
+h2 {
+  @extend %heading;
+  font-size: $font-size-base * 2;
+}
+
+h3 {
+  @extend %heading;
+  font-size: $font-size-base * 1.75;
+}
+
+h4 {
+  @extend %heading;
+  font-size: $font-size-base * 1.5;
+}
+
+h5 {
+  @extend %heading;
+  font-size: $font-size-base * 1.25;
+}
+
+h6 {
+  @extend %heading;
+  font-size: $font-size-base;
+}
