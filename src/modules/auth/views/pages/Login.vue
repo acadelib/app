@@ -1,23 +1,44 @@
 <template>
   <div>
     <form @submit.prevent="login">
-      <input type="email" placeholder="Adresse e-mail" v-model="email" />
-      <input type="password" placeholder="Mot de passe" v-model="password" />
+      <form-input
+        id="email"
+        type="email"
+        label="Adresse e-mail"
+        placeholder="Saisissez votre adresse e-mail"
+        required
+        v-model="email"
+      />
+
+      <form-input
+        id="password"
+        type="password"
+        label="Mot de passe"
+        placeholder="Saisissez votre mot de passe"
+        required
+        v-model="password"
+      />
+
       <button type="submit">Connexion</button>
     </form>
   </div>
 </template>
 
 <script>
+import FormInput from "@/components/form/Input";
 import { LOGIN } from "@/modules/auth/store/actions.type";
 
 export default {
   name: "Login",
 
+  components: {
+    FormInput,
+  },
+
   data() {
     return {
       email: "",
-      password: ""
+      password: "",
     };
   },
 
@@ -26,12 +47,12 @@ export default {
       this.$store
         .dispatch(LOGIN, {
           email: this.email,
-          password: this.password
+          password: this.password,
         })
         .then(() => {
           this.$router.push({ name: "dashboard" });
         });
-    }
-  }
+    },
+  },
 };
 </script>
