@@ -1,10 +1,26 @@
 // Color system
-$blue: #28a6e5;
+$white: #fff;
 $gray-100: #f4f4f4;
 $gray-500: #a8a8a8;
 $gray-700: #4d4d4d;
 
+$blue: #28a6e5;
+$green: #29e2a8;
+$yellow: #e2d829;
+$orange: #ff9a2c;
+$red: #e02b52;
+
 $primary: $blue;
+$success: $green;
+$warning: $orange;
+$danger: $red;
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger
+);
 
 // Body
 $body-color: $gray-700;

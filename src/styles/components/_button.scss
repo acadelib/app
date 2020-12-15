@@ -1,0 +1,36 @@
+.c-button {
+  padding: .625rem 1.875rem;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  cursor: pointer;
+  background: none;
+  border: .125rem solid transparent;
+  border-radius: $border-radius;
+  transition: .5s ease-out;
+
+  @each $color, $value in $theme-colors {
+    &:not(.is-outlined).is-#{$color} {
+      color: $white;
+      background-color: $value;
+      border-color: $value;
+
+      &:hover {
+        background-color: lighten($value, 20%);
+      }
+    }
+
+    &.is-outlined.is-#{$color} {
+      color: $value;
+      border-color: $value;
+
+      &:hover {
+        color: $white;
+        background-color: $value;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
