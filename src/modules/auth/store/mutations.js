@@ -9,7 +9,7 @@ const mutations = {
   [PURGE_AUTH](state) {
     state.user = {};
     state.isAuthenticated = false;
-  }
+  },
 };
 
 export default mutations;

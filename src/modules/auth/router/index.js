@@ -6,17 +6,17 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "auth" */ "../views/layouts/Auth"),
     meta: {
-      middleware: [guest]
+      middleware: [guest],
     },
     children: [
       {
         path: "login",
         name: "login",
         component: () =>
-          import(/* webpackChunkName: "auth" */ "../views/pages/Login")
-      }
-    ]
-  }
+          import(/* webpackChunkName: "auth" */ "../views/pages/Login"),
+      },
+    ],
+  },
 ];
 
 export default routes;

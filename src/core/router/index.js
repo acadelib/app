@@ -10,22 +10,22 @@ const routes = [
     component: () => import("../views/layouts/App"),
     redirect: { name: "dashboard" },
     meta: {
-      middleware: [auth]
+      middleware: [auth],
     },
     children: [
       {
         path: "dashboard",
         name: "dashboard",
-        component: () => import("../views/pages/Dashboard")
-      }
-    ]
-  }
+        component: () => import("../views/pages/Dashboard"),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

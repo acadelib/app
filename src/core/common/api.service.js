@@ -13,5 +13,5 @@ export default {
 
   post(resource, params) {
     return axios.post(resource, params);
-  }
+  },
 };

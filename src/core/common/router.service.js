@@ -14,22 +14,22 @@ class RouterService {
     router.addRoutes(this.routes);
 
     router.beforeEach((to, from, next) => {
-      if (to.meta.middleware || to.matched.some(m => m.meta.middleware)) {
+      if (to.meta.middleware || to.matched.some((m) => m.meta.middleware)) {
         const middleware = [
           ...(to.meta.middleware ?? []),
-          ...to.matched.map(m => m.meta.middleware).flat()
+          ...to.matched.map((m) => m.meta.middleware).flat(),
         ];
 
         const context = {
           to,
           from,
           next,
-          store
+          store,
         };
 
         return middleware[0]({
           ...context,
-          next: this.nextMiddleware(context, middleware, 1)
+          next: this.nextMiddleware(context, middleware, 1),
         });
       }
 
@@ -49,7 +49,7 @@ class RouterService {
     return () => {
       nextMiddleware({
         ...context,
-        next: this.nextMiddleware(context, middleware, index + 1)
+        next: this.nextMiddleware(context, middleware, index + 1),
       });
     };
   }

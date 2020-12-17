@@ -12,7 +12,7 @@ const actions = {
 
   [GET_USER](context) {
     return ApiService.get("/api/user")
-      .then(response => {
+      .then((response) => {
         context.commit(SET_AUTH, response.data);
       })
       .catch(() => {
@@ -23,7 +23,7 @@ const actions = {
   async [LOGOUT](context) {
     await ApiService.post("/logout");
     context.commit(PURGE_AUTH);
-  }
+  },
 };
 
 export default actions;
