@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: $font-family;
@@ -14,8 +18,11 @@ body {
 }
 
 %heading {
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
+  line-height: 1.2;
 }
 
 h1 {

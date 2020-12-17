@@ -18,7 +18,9 @@
       v-model="password"
     />
 
-    <v-button type="submit" color="primary">Connexion</v-button>
+    <div class="text-center">
+      <v-button type="submit" color="primary">Connexion</v-button>
+    </div>
   </form>
 </template>
 

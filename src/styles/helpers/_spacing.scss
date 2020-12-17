@@ -1,0 +1,26 @@
+$spacing-shortcuts: ("margin": "m", "padding": "p");
+$spacing-directions: ("top": "t", "right": "r", "bottom": "b", "left": "l");
+
+@each $property, $shortcut in $spacing-shortcuts {
+  @for $i from 1 through 3 {
+    .#{$shortcut}-#{$i} {
+      #{$property}: #{$i}rem;
+    }
+
+    .#{$shortcut}x-#{$i} {
+      #{$property}-left: #{$i}rem;
+      #{$property}-right: #{$i}rem;
+    }
+
+    .#{$shortcut}y-#{$i} {
+      #{$property}-top: #{$i}rem;
+      #{$property}-bottom: #{$i}rem;
+    }
+
+    @each $direction, $suffix in $spacing-directions {
+      .#{$shortcut}#{$suffix}-#{$i} {
+        #{$property}-#{$direction}: #{$i}rem;
+      }
+    }
+  }
+}
