@@ -19,7 +19,7 @@
         v-model="password"
       />
 
-      <button type="submit">Connexion</button>
+      <button type="submit" class="button is-primary">Connexion</button>
     </form>
   </div>
 </template>

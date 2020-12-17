@@ -1,9 +1,9 @@
 <template>
-  <div class="c-form__field">
-    <label :for="id" class="c-form__label">{{ label }}</label>
+  <div class="field">
+    <label :for="id" class="label">{{ label }}</label>
     <input
       :type="type"
-      class="c-form__input"
+      class="input"
       :id="id"
       :placeholder="placeholder"
       :required="required"
