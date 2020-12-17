@@ -7,8 +7,8 @@
 <script>
 export default {
   props: {
-    tablet: Number,
-    desktop: Number,
+    tablet: String,
+    desktop: String,
   },
 
   computed: {
@@ -21,3 +21,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/styles/grid/column";
+</style>

@@ -18,11 +18,12 @@
       v-model="password"
     />
 
-    <button type="submit" class="button is-primary">Connexion</button>
+    <v-button type="submit" color="primary">Connexion</v-button>
   </form>
 </template>
 
 <script>
+import VButton from "@/components/elements/Button";
 import FormInput from "@/components/form/Input";
 import { LOGIN } from "@/modules/auth/store/actions.type";
 
@@ -30,6 +31,7 @@ export default {
   name: "Login",
 
   components: {
+    VButton,
     FormInput,
   },
 

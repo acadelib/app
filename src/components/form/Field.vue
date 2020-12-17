@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="field">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "@/styles/grid/container";
+@import "@/styles/form/field";
 </style>

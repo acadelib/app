@@ -1,19 +1,20 @@
 <template>
-  <div class="row" :class="classes">
+  <button :type="type" class="button" :class="classes">
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script>
 export default {
   props: {
-    isCentered: Boolean,
+    type: String,
+    color: String,
   },
 
   computed: {
     classes() {
       return {
-        "is-centered": this.isCentered,
+        [`is-${this.color}`]: this.color,
       };
     },
   },
@@ -21,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/grid/row";
+@import "@/styles/elements/button";
 </style>
