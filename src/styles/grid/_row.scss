@@ -1,0 +1,7 @@
+.row {
+  display: flex;
+
+  &.is-centered {
+    justify-content: center;
+  }
+}

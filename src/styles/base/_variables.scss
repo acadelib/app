@@ -22,6 +22,26 @@ $theme-colors: (
   "danger": $danger
 );
 
+// Grid breakpoints
+$breakpoints: (
+  mobile: 0,
+  tablet: 768px,
+  desktop: 992px,
+  widescreen: 1200px
+);
+
+// Grid containers
+$container-max-widths: (
+  mobile: 540px,
+  tablet: 720px,
+  desktop: 960px,
+  widescreen: 1140px
+);
+
+// Grid columns
+$grid-columns: 12;
+$column-gap: .75rem;
+
 // Body
 $body-color: $gray-700;
 

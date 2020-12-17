@@ -1,0 +1,15 @@
+.column {
+  width: 100%;
+  padding-right: $column-gap;
+  padding-left: $column-gap;
+
+  @each $name, $width in $breakpoints {
+    @media (min-width: $width) {
+      @for $i from 1 through $grid-columns {
+        &.is-#{$i}-#{$name} {
+          width: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+}
