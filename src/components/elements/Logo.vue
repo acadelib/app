@@ -57,5 +57,9 @@ export default {
   &.is-large {
     width: 7.5rem;
   }
+
+  &.is-small {
+    width: 3.125rem;
+  }
 }
 </style>

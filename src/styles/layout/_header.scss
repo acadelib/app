@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $column-gap;
+  background-color: $primary;
+
+  .sidebar-toggler {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+
+    span {
+      display: block;
+      height: .1875rem;
+      background-color: $white;
+      border-radius: $border-radius;
+
+      &:first-child {
+        width: 1.875rem;
+      }
+
+      &:nth-child(2) {
+        width: .9375rem;
+        margin-top: .3125rem;
+        margin-bottom: .3125rem;
+      }
+
+      &:last-child {
+        width: 1.5625rem;
+      }
+    }
+  }
+
+  .help {
+    svg {
+      width: 1.625rem;
+      vertical-align: middle;
+      fill: $white;
+    }
+  }
+}
