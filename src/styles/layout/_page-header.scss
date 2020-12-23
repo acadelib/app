@@ -1,0 +1,15 @@
+.page-header {
+  padding: $column-gap;
+  background-color: $primary;
+}
+
+.page-title {
+  font-size: $font-size-base * 1.5;
+  color: $white;
+}
+
+.page-subtitle {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: lighten($primary, 23.5%)
+}

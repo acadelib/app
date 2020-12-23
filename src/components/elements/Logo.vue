@@ -59,7 +59,7 @@ export default {
   }
 
   &.is-small {
-    width: 3.125rem;
+    width: 2.8125rem;
   }
 }
 </style>
