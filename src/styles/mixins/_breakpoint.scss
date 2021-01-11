@@ -1,0 +1,13 @@
+@mixin from($name) {
+  $width: map-get($breakpoints, $name);
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin until($name) {
+  $width: map-get($breakpoints, $name);
+  @media screen and (max-width: $width - 1px) {
+    @content;
+  }
+}

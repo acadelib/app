@@ -4,7 +4,7 @@
   margin-left: auto;
 
   @each $name, $width in $breakpoints {
-    @media (min-width: $width) {
+    @include from($name) {
       max-width: map-get($container-max-widths, $name);
     }
   }
