@@ -1,5 +1,6 @@
 .page-header {
-  padding: $column-gap;
+  padding-top: $column-gap;
+  padding-bottom: $column-gap;
 
   @include until(desktop) {
     background-color: $primary;

@@ -1,11 +1,10 @@
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: $column-gap;
+  padding-left: $column-gap;
 
-  @each $name, $width in $breakpoints {
-    @include from($name) {
-      max-width: map-get($container-max-widths, $name);
-    }
+  @include from(desktop) {
+    padding-right: $column-gap * 2;
+    padding-left: $column-gap * 2;
   }
 }

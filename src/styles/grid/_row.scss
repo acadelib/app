@@ -1,5 +1,8 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -$column-gap;
+  margin-left: -$column-gap;
 
   &.is-centered {
     justify-content: center;
