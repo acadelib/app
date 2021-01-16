@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <button type="button" class="sidebar-toggler">
+    <button type="button" class="sidebar-toggler" @click="toggleSidebar">
       <span class="slice"></span>
       <span class="slice"></span>
       <span class="slice"></span>
@@ -21,10 +21,17 @@
 
 <script>
 import Logo from "@/components/elements/Logo";
+import { TOGGLE_SIDEBAR } from "@/core/store/actions.type";
 
 export default {
   components: {
     Logo,
+  },
+
+  methods: {
+    toggleSidebar() {
+      this.$store.dispatch(TOGGLE_SIDEBAR);
+    },
   },
 };
 </script>
