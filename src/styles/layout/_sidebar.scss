@@ -1,27 +1,26 @@
 .sidebar-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  background-color: rgba(0, 4, 30, .5);
+  @include until(desktop) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 4, 30, .5);
 
-  &.is-visible {
-    display: block;
+    &.is-visible {
+      display: block;
+    }
   }
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   width: 16.875rem;
+  height: 100%;
   padding: 1.5rem;
   background-color: $white;
   border-top-right-radius: 1.5625rem;
@@ -60,5 +59,17 @@
 
   .nav-text {
     margin-left: .75rem;
+  }
+
+  @include until(desktop) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include from(desktop) {
+    border-radius: 0;
+    border-right: .3125rem solid $gray-100;
   }
 }

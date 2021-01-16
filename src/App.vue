@@ -1,12 +1,10 @@
 <template>
-  <div class="app">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <style lang="scss">
+// Base
 @import "@/styles/base/reset";
-@import "@/styles/layout/app";
 
 // Helpers
 @import "@/styles/helpers/spacing";

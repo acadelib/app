@@ -1,0 +1,5 @@
+.page-container {
+  @include from(desktop) {
+    flex: 1;
+  }
+}

@@ -1,15 +1,25 @@
 .page-header {
   padding: $column-gap;
-  background-color: $primary;
+
+  @include until(desktop) {
+    background-color: $primary;
+  }
 }
 
 .page-title {
   font-size: $font-size-base * 1.5;
-  color: $white;
+
+  @include until(desktop) {
+    color: $white;
+  }
 }
 
 .page-subtitle {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
-  color: lighten($primary, 23.5%)
+  color: lighten($primary, 23.5%);
+
+  @include from(desktop) {
+    color: $gray-500;
+  }
 }

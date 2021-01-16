@@ -40,4 +40,8 @@
       fill: $white;
     }
   }
+
+  @include from(desktop) {
+    display: none;
+  }
 }
