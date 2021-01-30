@@ -4,14 +4,7 @@
 
     <div class="page-container">
       <app-header></app-header>
-
-      <main class="content">
-        <page-header></page-header>
-
-        <container>
-          <router-view />
-        </container>
-      </main>
+      <app-content></app-content>
     </div>
   </div>
 </template>
@@ -19,15 +12,13 @@
 <script>
 import AppHeader from "@/core/views/layouts/Header";
 import AppSidebar from "@/core/views/layouts/Sidebar";
-import PageHeader from "@/core/views/layouts/PageHeader";
-import Container from "@/components/grid/Container";
+import AppContent from "@/core/views/layouts/Content";
 
 export default {
   components: {
     AppHeader,
     AppSidebar,
-    PageHeader,
-    Container,
+    AppContent,
   },
 };
 </script>

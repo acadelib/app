@@ -3,8 +3,30 @@
   padding-right: $column-gap;
   padding-left: $column-gap;
 
-  @include from(desktop) {
-    padding-right: $column-gap * 2;
-    padding-left: $column-gap * 2;
+  &:not(.is-fluid) {
+    margin-right: auto;
+    margin-left: auto;
+
+    @each $name, $width in $breakpoints {
+      @include from($name) {
+        max-width: map-get($container-max-widths, $name);
+      }
+    }
+  }
+
+  &.is-fluid {
+    width: 100%;
+    padding-right: $column-gap;
+    padding-left: $column-gap;
+
+    @include from(desktop) {
+      padding-right: $column-gap * 2;
+      padding-left: $column-gap * 2;
+    }
+
+    @include from(widescreen) {
+      padding-right: $column-gap * 6;
+      padding-left: $column-gap * 6;
+    }
   }
 }

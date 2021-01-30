@@ -1,6 +1,6 @@
 <template>
   <div class="page-header">
-    <container>
+    <container fluid>
       <h1 class="page-title">Tableau de bord</h1>
       <span class="page-subtitle">Lycée Saint Riquier</span>
     </container>

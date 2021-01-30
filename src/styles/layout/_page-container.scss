@@ -1,5 +1,6 @@
 .page-container {
   @include from(desktop) {
     flex: 1;
+    overflow-y: scroll;
   }
 }

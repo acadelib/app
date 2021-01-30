@@ -1,0 +1,6 @@
+.content {
+  @include until(desktop) {
+    padding-top: $column-gap;
+    padding-bottom: $column-gap;
+  }
+}

@@ -5,6 +5,11 @@
   @include until(desktop) {
     background-color: $primary;
   }
+
+  @include from(desktop) {
+    padding-top: $column-gap * 2;
+    padding-bottom: $column-gap * 2;
+  }
 }
 
 .page-title {
