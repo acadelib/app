@@ -7,8 +7,8 @@
       :id="id"
       :placeholder="placeholder"
       :required="required"
-      :value="value"
-      @input="$emit('input', $event.target.value)"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </field>
 </template>
@@ -18,7 +18,8 @@ import Field from "@/components/form/Field";
 import FieldLabel from "@/components/form/Label";
 
 export default {
-  props: ["value", "id", "label", "type", "placeholder", "required"],
+  props: ["modelValue", "id", "label", "type", "placeholder", "required"],
+  emits: ["update:modelValue"],
 
   components: {
     Field,

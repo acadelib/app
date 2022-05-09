@@ -11,7 +11,7 @@ class RouterService {
   }
 
   init() {
-    router.addRoutes(this.routes);
+    this.routes.forEach((route) => router.addRoute(route));
 
     router.beforeEach((to, from, next) => {
       if (to.meta.middleware || to.matched.some((m) => m.meta.middleware)) {
