@@ -9,9 +9,42 @@
 
       <ul class="nav">
         <li class="nav-item">
-          <a href="#" class="nav-link is-active">
-            <span class="nav-icon"></span>
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <font-awesome-icon icon="house-user" />
+            </span>
+
             <span class="nav-text">Tableau de bord</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <font-awesome-icon icon="calendar-days" />
+            </span>
+
+            <span class="nav-text">Emploi du temps</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <font-awesome-icon icon="comments" />
+            </span>
+
+            <span class="nav-text">Messagerie</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link is-active">
+            <span class="nav-icon">
+              <font-awesome-icon icon="school" />
+            </span>
+
+            <span class="nav-text">Vie scolaire</span>
           </a>
 
           <ul class="dropdown-menu">
@@ -23,35 +56,20 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <span class="nav-icon"></span>
-            <span class="nav-text">Emploi du temps</span>
-          </a>
-        </li>
+            <span class="nav-icon">
+              <font-awesome-icon icon="coins" />
+            </span>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon"></span>
-            <span class="nav-text">Messagerie</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon"></span>
-            <span class="nav-text">Vie scolaire</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon"></span>
             <span class="nav-text">Comptabilité</span>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <span class="nav-icon"></span>
+            <span class="nav-icon">
+              <font-awesome-icon icon="gears" />
+            </span>
+
             <span class="nav-text">Administration</span>
           </a>
         </li>

@@ -54,9 +54,12 @@
   }
 
   .nav-icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 2.8125rem;
     height: 2.8125rem;
+    font-size: 1rem;
     background-color: $gray-100;
     border-radius: $border-radius / 2;
   }
@@ -80,11 +83,8 @@
     text-decoration: none;
     transition: ease-in-out all 250ms;
 
-    &:hover,
-    &.is-active {
-      padding-left: .5rem;
-      color: $primary;
-    }
+    &:not(.is-active):hover { padding-left: .5rem; }
+    &.is-active { color: $primary; }
   }
 
   @include until(desktop) {
