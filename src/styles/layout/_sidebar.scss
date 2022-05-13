@@ -46,11 +46,15 @@
 
     &.is-active {
       background-color: $gray-100;
+
+      ~ .dropdown-menu {
+        display: block;
+      }
     }
   }
 
   .nav-icon {
-    display: block; // Temporary
+    display: block;
     width: 2.8125rem;
     height: 2.8125rem;
     background-color: $gray-100;
@@ -59,6 +63,28 @@
 
   .nav-text {
     margin-left: .75rem;
+  }
+
+  .dropdown-menu {
+    display: none;
+    padding-left: 3.5625rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+  }
+
+  .dropdown-item {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: .875rem;
+    color: $body-color;
+    text-decoration: none;
+    transition: ease-in-out all 250ms;
+
+    &:hover,
+    &.is-active {
+      padding-left: .5rem;
+      color: $primary;
+    }
   }
 
   @include until(desktop) {

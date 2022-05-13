@@ -13,6 +13,12 @@
             <span class="nav-icon"></span>
             <span class="nav-text">Tableau de bord</span>
           </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item is-active">Absences</a></li>
+            <li><a href="#" class="dropdown-item">Retards</a></li>
+            <li><a href="#" class="dropdown-item">Punitions</a></li>
+          </ul>
         </li>
 
         <li class="nav-item">
