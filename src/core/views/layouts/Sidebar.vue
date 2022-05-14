@@ -33,8 +33,8 @@
         </div>
 
         <div class="user-info">
-          <span class="user-name">John Doe</span>
-          <span class="user-role">Administrateur</span>
+          <span class="user-name">{{ $store.getters.fullName }}</span>
+          <span class="user-role">{{ roles }}</span>
         </div>
 
         <ul class="user-nav">
@@ -45,7 +45,7 @@
           </li>
 
           <li class="user-item">
-            <a href="#" class="user-link">
+            <a href="#" class="user-link" @click.prevent="logout">
               <font-awesome-icon icon="right-from-bracket" />
             </a>
           </li>
@@ -58,6 +58,7 @@
 <script>
 import Logo from "@/components/elements/Logo";
 import { TOGGLE_SIDEBAR } from "@/core/store/actions.type";
+import { LOGOUT } from "@/modules/auth/store/actions.type";
 
 export default {
   components: {
@@ -72,11 +73,23 @@ export default {
     routes() {
       return this.$router.options.routes[0].children;
     },
+
+    roles() {
+      return this.$store.state.auth.user?.roles
+        ?.map((r) => r.display_name)
+        .join("/");
+    },
   },
 
   methods: {
     toggleSidebar() {
       this.$store.dispatch(TOGGLE_SIDEBAR);
+    },
+
+    logout() {
+      this.$store.dispatch(LOGOUT).then(() => {
+        this.$router.push({ name: "login" });
+      });
     },
   },
 };

@@ -13,16 +13,15 @@ const actions = {
   [GET_USER](context) {
     return ApiService.get("/api/user")
       .then((response) => {
-        context.commit(SET_AUTH, response.data);
+        context.commit(SET_AUTH, response.data.user);
       })
       .catch(() => {
         context.commit(PURGE_AUTH);
       });
   },
 
-  async [LOGOUT](context) {
-    await ApiService.post("/logout");
-    context.commit(PURGE_AUTH);
+  [LOGOUT](context) {
+    return ApiService.post("/logout").then(() => context.commit(PURGE_AUTH));
   },
 };
 

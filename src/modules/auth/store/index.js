@@ -10,6 +10,7 @@ const user = {
   mutations,
   getters: {
     isAuthenticated: (state) => state.isAuthenticated,
+    fullName: (state) => `${state.user.first_name} ${state.user.last_name}`,
   },
 };
 
