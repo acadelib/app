@@ -27,7 +27,30 @@
         </li>
       </ul>
 
-      <div></div>
+      <div class="user">
+        <div class="user-avatar">
+          <img src="@/assets/images/avatar.svg" alt="John Doe" />
+        </div>
+
+        <div class="user-info">
+          <span class="user-name">John Doe</span>
+          <span class="user-role">Administrateur</span>
+        </div>
+
+        <ul class="user-nav">
+          <li class="user-item">
+            <a href="#" class="user-link">
+              <font-awesome-icon icon="gear" />
+            </a>
+          </li>
+
+          <li class="user-item">
+            <a href="#" class="user-link">
+              <font-awesome-icon icon="right-from-bracket" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
   </div>
 </template>
