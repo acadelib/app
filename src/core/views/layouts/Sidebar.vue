@@ -8,70 +8,22 @@
       <logo color="primary" size="small"></logo>
 
       <ul class="nav">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item" v-for="(route, index) in routes" :key="index">
+          <router-link :to="{ name: route.name }" class="nav-link">
             <span class="nav-icon">
-              <font-awesome-icon icon="house-user" />
+              <font-awesome-icon :icon="route.meta.icon" />
             </span>
 
-            <span class="nav-text">Tableau de bord</span>
-          </a>
-        </li>
+            <span class="nav-text">{{ route.meta.title }}</span>
+          </router-link>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon">
-              <font-awesome-icon icon="calendar-days" />
-            </span>
-
-            <span class="nav-text">Emploi du temps</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon">
-              <font-awesome-icon icon="comments" />
-            </span>
-
-            <span class="nav-text">Messagerie</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link is-active">
-            <span class="nav-icon">
-              <font-awesome-icon icon="school" />
-            </span>
-
-            <span class="nav-text">Vie scolaire</span>
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item is-active">Absences</a></li>
-            <li><a href="#" class="dropdown-item">Retards</a></li>
-            <li><a href="#" class="dropdown-item">Punitions</a></li>
+          <ul class="dropdown-menu" v-if="route.children">
+            <li v-for="(child, childIndex) in route.children" :key="childIndex">
+              <router-link :to="{ name: child.name }" class="dropdown-item">{{
+                child.meta.title
+              }}</router-link>
+            </li>
           </ul>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon">
-              <font-awesome-icon icon="coins" />
-            </span>
-
-            <span class="nav-text">Comptabilité</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon">
-              <font-awesome-icon icon="gears" />
-            </span>
-
-            <span class="nav-text">Administration</span>
-          </a>
         </li>
       </ul>
 
@@ -92,6 +44,10 @@ export default {
   computed: {
     visible() {
       return this.$store.getters.sidebarOpen;
+    },
+
+    routes() {
+      return this.$router.options.routes[0].children;
     },
   },
 

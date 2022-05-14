@@ -14,6 +14,10 @@ const routes = [
         path: "dashboard",
         name: "dashboard",
         component: () => import("../views/pages/Dashboard"),
+        meta: {
+          title: "Tableau de bord",
+          icon: "house-user",
+        },
       },
     ],
   },
@@ -22,6 +26,8 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: "is-open",
+  linkExactActiveClass: "is-active",
 });
 
 export default router;

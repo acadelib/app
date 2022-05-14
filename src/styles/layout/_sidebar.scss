@@ -46,10 +46,10 @@
 
     &.is-active {
       background-color: $gray-100;
+    }
 
-      ~ .dropdown-menu {
-        display: block;
-      }
+    &.is-open ~ .dropdown-menu {
+      display: block;
     }
   }
 

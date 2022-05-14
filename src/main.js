@@ -6,24 +6,10 @@ import RouterService from "@/core/common/router.service";
 import { GET_USER } from "@/modules/auth/store/actions.type";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faHouseUser,
-  faCalendarDays,
-  faComments,
-  faSchool,
-  faCoins,
-  faGears,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(
-  faHouseUser,
-  faCalendarDays,
-  faComments,
-  faSchool,
-  faCoins,
-  faGears
-);
+library.add(faHouseUser);
 
 ApiService.init();
 
